@@ -16,7 +16,7 @@ function App() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
               <img 
-                src="/public/logo-tata-instagram.JPG" 
+                src="/logo-tata-instagram.JPG" 
                 alt="AI Association Logo" 
                 className="h-10 w-auto"
               />
@@ -41,7 +41,7 @@ function App() {
             <div className="mb-8">
               <div className="inline-flex items-center justify-center w-24 h-24 bg-white rounded-2xl mb-6 shadow-sm border border-gray-100">
                 <img 
-                  src="/public/logo-tata-instagram.JPG" 
+                  src="/logo-tata-instagram.JPG" 
                   alt="AI Association Logo" 
                   className="h-20 w-auto"
                 />
@@ -82,7 +82,7 @@ function App() {
           <div className="text-center mb-16">
             <div className="flex justify-center mb-6">
               <img 
-                src="/public/logo-tata-instagram.JPG" 
+                src="/logo-tata-instagram.JPG" 
                 alt="AI Association Logo" 
                 className="h-16 w-auto"
               />
@@ -111,7 +111,7 @@ function App() {
             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
               <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
                 <img 
-                  src="/public/logo-tata-instagram.JPG" 
+                  src="/logo-tata-instagram.JPG" 
                   alt="AI Association Logo" 
                   className="h-8 w-auto"
                 />
@@ -153,7 +153,7 @@ function App() {
           <div className="text-center mb-16">
             <div className="flex justify-center mb-6">
               <img 
-                src="/public/logo-tata-instagram.JPG" 
+                src="/logo-tata-instagram.JPG" 
                 alt="AI Association Logo" 
                 className="h-16 w-auto"
               />
@@ -169,7 +169,7 @@ function App() {
             <div className="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100">
               <div className="relative h-48">
                 <img 
-                  src="/public/WhatsApp Image 2025-05-13 at 21.44.01.jpeg" 
+                  src="/WhatsApp Image 2025-05-13 at 21.44.01.jpeg" 
                   alt="Lecim na AI Szczecin" 
                   className="w-full h-full object-cover"
                 />
@@ -193,7 +193,7 @@ function App() {
             <div className="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100">
               <div className="relative h-48">
                 <img 
-                  src="/public/_GAS6497.jpg" 
+                  src="/_GAS6497.jpg" 
                   alt="Kulturalnie o AI Event" 
                   className="w-full h-full object-cover"
                 />
@@ -217,7 +217,7 @@ function App() {
             <div className="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100">
               <div className="relative h-48">
                 <img 
-                  src="/public/1743685905915.jpeg" 
+                  src="/1743685905915.jpeg" 
                   alt="Debaty i panele" 
                   className="w-full h-full object-cover"
                 />
@@ -250,7 +250,7 @@ function App() {
           <div className="text-center mb-16">
             <div className="flex justify-center mb-6">
               <img 
-                src="/public/logo-tata-instagram.JPG" 
+                src="/logo-tata-instagram.JPG" 
                 alt="AI Association Logo" 
                 className="h-16 w-auto"
               />
@@ -393,7 +393,7 @@ function App() {
           <div className="text-center mb-16">
             <div className="flex justify-center mb-6">
               <img 
-                src="/public/logo-tata-instagram.JPG" 
+                src="/logo-tata-instagram.JPG" 
                 alt="AI Association Logo" 
                 className="h-16 w-auto"
               />
@@ -467,7 +467,7 @@ function App() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-3 mb-4 md:mb-0">
               <img 
-                src="/public/logo-tata-instagram copy.JPG" 
+                src="/logo-tata-instagram copy.JPG" 
                 alt="ON.AI Logo" 
                 className="h-8 w-auto"
               />
