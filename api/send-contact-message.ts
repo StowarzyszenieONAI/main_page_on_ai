@@ -90,6 +90,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(200).json({ success: true });
   } catch (error) {
     console.error('API error:', error);
-    return res.status(500).json({ error: 'Wystąpił błąd po stronie serwera' });
+return res.status(500).json({
+  success: false,
+  error: 'Wystąpił błąd po stronie serwera',
+  details: (error as any)?.message || 'Brak szczegółów',
+});
   }
 }
