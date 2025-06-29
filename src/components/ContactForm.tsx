@@ -96,26 +96,18 @@ export default function ContactForm({ onSubmitSuccess }: ContactFormProps) {
     setSubmitMessage('');
 
     try {
-      // Call the Supabase Edge Function
-      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-      const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-      
-      if (!supabaseUrl || !supabaseAnonKey) {
-        throw new Error('Supabase configuration missing');
-      }
+    const response = await fetch('/api/send-contact-message', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(formData),
+});
 
-      const response = await fetch(`${supabaseUrl}/functions/v1/send-contact-email`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${supabaseAnonKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
 
       const result = await response.json();
 
-      if (response.ok && result.success) {
+if (response.ok) {
         setSubmitStatus('success');
         setSubmitMessage(result.message || 'Dziękujemy za kontakt! Odpowiemy najszybciej jak to możliwe.');
         setFormData({ name: '', email: '', subject: '', message: '' });
