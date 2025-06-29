@@ -1,5 +1,4 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import fetch from 'node-fetch';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -24,9 +23,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const notionApiKey = process.env.NOTION_API_KEY;
   const notionDatabaseId = process.env.NOTION_DATABASE_ID;
 
+  if (!resendApiKey || !notionApiKey || !notionDatabaseId) {
+    return res.status(500).json({ error: 'Brakuje konfiguracji środowiskowej' });
+  }
+
   try {
-    // 1. E-mail do Ciebie
-    await fetch('https://api.resend.com/emails', {
+    // 1. Wyślij mail do biuro@on-ai.pl
+    const notify = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${resendApiKey}`,
@@ -46,8 +49,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }),
     });
 
-    // 2. Potwierdzenie do nadawcy
-    await fetch('https://api.resend.com/emails', {
+    if (!notify.ok) {
+      const errText = await notify.text();
+      throw new Error(`Błąd wysyłania do Resend (biuro): ${errText}`);
+    }
+
+    // 2. Potwierdzenie dla użytkownika
+    const confirm = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${resendApiKey}`,
@@ -66,8 +74,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }),
     });
 
-    // 3. Zapis do Notion
-    await fetch('https://api.notion.com/v1/pages', {
+    if (!confirm.ok) {
+      const errText = await confirm.text();
+      throw new Error(`Błąd wysyłania do Resend (użytkownik): ${errText}`);
+    }
+
+    // 3. Zapisz do Notion
+    const notion = await fetch('https://api.notion.com/v1/pages', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${notionApiKey}`,
@@ -87,13 +100,18 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }),
     });
 
-    return res.status(200).json({ success: true });
-  } catch (error) {
+    if (!notion.ok) {
+      const errText = await notion.text();
+      throw new Error(`Błąd zapisu do Notion: ${errText}`);
+    }
+
+    return res.status(200).json({ success: true, message: 'Wiadomość wysłana pomyślnie.' });
+  } catch (error: any) {
     console.error('API error:', error);
-return res.status(500).json({
-  success: false,
-  error: 'Wystąpił błąd po stronie serwera',
-  details: (error as any)?.message || 'Brak szczegółów',
-});
+    return res.status(500).json({
+      success: false,
+      error: 'Wystąpił błąd po stronie serwera',
+      details: error?.message || error?.toString(),
+    });
   }
 }
