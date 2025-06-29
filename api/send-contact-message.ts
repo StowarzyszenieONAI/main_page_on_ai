@@ -1,5 +1,5 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-const handler = async (req: Request) => {
+
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -24,7 +24,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const notionDatabaseId = process.env.NOTION_DATABASE_ID;
 
   try {
-    // 1. Wyślij e-mail do biuro@on-ai.pl
+    // 1. E-mail do Ciebie
     await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
@@ -45,7 +45,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }),
     });
 
-    // 2. Wyślij potwierdzenie do użytkownika
+    // 2. Potwierdzenie do nadawcy
     await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
@@ -65,7 +65,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }),
     });
 
-    // 3. Zapisz do Notion
+    // 3. Zapis do Notion
     await fetch('https://api.notion.com/v1/pages', {
       method: 'POST',
       headers: {
@@ -92,5 +92,3 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(500).json({ error: 'Wystąpił błąd po stronie serwera' });
   }
 }
-}
-export default handler
