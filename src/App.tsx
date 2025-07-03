@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Users, Award, Mail, Phone, MapPin, Calendar, Play, ArrowRight, Github, Linkedin, Twitter, Download, FileText, UserPlus, Facebook, Instagram } from 'lucide-react';
 import ContactForm from './components/ContactForm';
 
@@ -15,9 +15,9 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <img 
-                src="/logo-tata-instagram.JPG" 
-                alt="AI Association Logo" 
+              <img
+                src="/logo-tata-instagram.JPG"
+                alt="AI Association Logo"
                 className="h-10 w-auto"
               />
               <span className="text-xl font-anton text-black">
@@ -40,15 +40,15 @@ function App() {
           <div className="text-center animate-fade-in-up">
             <div className="mb-8">
               <div className="inline-flex items-center justify-center w-24 h-24 bg-white rounded-2xl mb-6 shadow-sm border border-gray-100">
-                <img 
-                  src="/logo-tata-instagram.JPG" 
-                  alt="AI Association Logo" 
+                <img
+                  src="/logo-tata-instagram.JPG"
+                  alt="AI Association Logo"
                   className="h-20 w-auto"
                 />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-anton text-black mb-6 leading-tight">
-              Edukacja w tematyce 
+              Edukacja w tematyce
               <span className="block text-accent-blue">
                 sztucznej inteligencji
               </span>
@@ -58,14 +58,14 @@ function App() {
               Wierzymy, że AI powinna być etyczna, dostępna i wspierająca człowieka. Dlatego organizujemy warsztaty, spotkania, wydarzenia kulturalne i treści edukacyjne – dla dzieci, młodzieży i dorosłych.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
+              <button
                 onClick={() => scrollToSection('join')}
                 className="btn-primary inline-flex items-center"
               >
                 Dołącz do naszej społeczności
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('achievements')}
                 className="btn-secondary inline-flex items-center"
               >
@@ -81,9 +81,9 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex justify-center mb-6">
-              <img 
-                src="/logo-tata-instagram.JPG" 
-                alt="AI Association Logo" 
+              <img
+                src="/logo-tata-instagram.JPG"
+                alt="AI Association Logo"
                 className="h-16 w-auto"
               />
             </div>
@@ -106,13 +106,13 @@ function App() {
               </p>
             </div>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
               <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
-                <img 
-                  src="/logo-tata-instagram.JPG" 
-                  alt="AI Association Logo" 
+                <img
+                  src="/logo-tata-instagram.JPG"
+                  alt="AI Association Logo"
                   className="h-8 w-auto"
                 />
               </div>
@@ -122,7 +122,7 @@ function App() {
                 Popularyzujemy i wdrażamy nowe rozwiązania technologiczne, przeciwdziałając wykluczeniu cyfrowemu.
               </p>
             </div>
-            
+
             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
               <div className="w-12 h-12 bg-accent-blue/10 rounded-lg flex items-center justify-center mb-6">
                 <Users className="h-6 w-6 text-accent-blue" />
@@ -133,7 +133,7 @@ function App() {
                 Wspieramy współpracę między nauczycielami, uczniami, rodzicami, pasjonatami technologii i instytucjami edukacyjnymi – w kraju i za granicą.
               </p>
             </div>
-            
+
             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
               <div className="w-12 h-12 bg-black/10 rounded-lg flex items-center justify-center mb-6">
                 <Award className="h-6 w-6 text-black" />
@@ -152,9 +152,9 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex justify-center mb-6">
-              <img 
-                src="/logo-tata-instagram.JPG" 
-                alt="AI Association Logo" 
+              <img
+                src="/logo-tata-instagram.JPG"
+                alt="AI Association Logo"
                 className="h-16 w-auto"
               />
             </div>
@@ -168,9 +168,9 @@ function App() {
             {/* Project Card 1 */}
             <div className="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100">
               <div className="relative h-48">
-                <img 
-                  src="/WhatsApp Image 2025-05-13 at 21.44.01.jpeg" 
-                  alt="Lecim na AI Szczecin" 
+                <img
+                  src="/WhatsApp Image 2025-05-13 at 21.44.01.jpeg"
+                  alt="Lecim na AI Szczecin"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/10"></div>
@@ -192,9 +192,9 @@ function App() {
             {/* Project Card 2 - Swapped image with Project Card 3 */}
             <div className="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100">
               <div className="relative h-48">
-                <img 
-                  src="/_GAS6497.jpg" 
-                  alt="Kulturalnie o AI Event" 
+                <img
+                  src="/_GAS6497.jpg"
+                  alt="Kulturalnie o AI Event"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/10"></div>
@@ -216,9 +216,9 @@ function App() {
             {/* Project Card 3 - Swapped image with Project Card 2 */}
             <div className="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100">
               <div className="relative h-48">
-                <img 
-                  src="/1743685905915.jpeg" 
-                  alt="Debaty i panele" 
+                <img
+                  src="/1743685905915.jpeg"
+                  alt="Debaty i panele"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/10"></div>
@@ -249,9 +249,9 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex justify-center mb-6">
-              <img 
-                src="/logo-tata-instagram.JPG" 
-                alt="AI Association Logo" 
+              <img
+                src="/logo-tata-instagram.JPG"
+                alt="AI Association Logo"
                 className="h-16 w-auto"
               />
             </div>
@@ -272,13 +272,13 @@ function App() {
                 <div className="border-l-4 border-accent-blue pl-6">
                   <h4 className="text-lg font-montserrat font-semibold text-black mb-2">Korzyści z członkostwa</h4>
                   <p className="text-gray-700 mb-3 font-montserrat font-light">
-                    Pełne prawa członkowskie, możliwość uczestnictwa w walnym zgromadzeniu, 
+                    Pełne prawa członkowskie, możliwość uczestnictwa w walnym zgromadzeniu,
                     prawo głosu w sprawach stowarzyszenia.
                   </p>
                   <div className="text-sm text-gray-600 space-y-1 font-montserrat">
                     <p>• Składka członkowska: 50 zł rocznie</p>
-                    <p>• Możliwość kandydowania do zarządu</p>
-                    <p>• Dostęp do wszystkich wydarzeń</p>
+                    {/* <p>• Możliwość kandydowania do zarządu</p> */}
+                    {/* <p>• Dostęp do wszystkich wydarzeń</p> */}
                     <p>• Priorytetowy dostęp do warsztatów</p>
                     <p>• Udział w projektach stowarzyszenia</p>
                     <p>• Networking z ekspertami AI</p>
@@ -298,7 +298,7 @@ function App() {
                     <p className="text-gray-700 text-sm font-montserrat font-light">Pobierz i wypełnij deklarację członkowską</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-accent-blue text-white rounded-full flex items-center justify-center font-montserrat font-bold text-sm">2</div>
                   <div>
@@ -306,7 +306,7 @@ function App() {
                     <p className="text-gray-700 text-sm font-montserrat font-light">Prześlij wypełnioną deklarację na adres stowarzyszenia</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-accent-blue text-white rounded-full flex items-center justify-center font-montserrat font-bold text-sm">3</div>
                   <div>
@@ -314,7 +314,7 @@ function App() {
                     <p className="text-gray-700 text-sm font-montserrat font-light">Opłać roczną składkę członkowską (50 zł)</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-accent-blue text-white rounded-full flex items-center justify-center font-montserrat font-bold text-sm">4</div>
                   <div>
@@ -329,7 +329,7 @@ function App() {
           {/* Documents Section */}
           <div className="bg-white rounded-lg shadow-sm p-8 border border-gray-100">
             <h3 className="text-2xl font-anton text-black mb-8 text-center">Dokumenty do pobrania</h3>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               {/* Statutes */}
               <div className="text-center p-6 border-2 border-gray-200 rounded-lg hover:border-accent-blue transition-colors">
@@ -340,9 +340,9 @@ function App() {
                 <p className="text-gray-700 text-sm mb-4 font-montserrat font-light">
                   Poznaj cele, zasady działania i strukturę organizacyjną stowarzyszenia
                 </p>
-                <a 
-                  href="https://drive.google.com/file/d/1mJ9HDJq5oenOx8E25Y4o_VYu3Ko6znHg/view?usp=drive_link" 
-                  target="_blank" 
+                <a
+                  href="https://drive.google.com/file/d/1mJ9HDJq5oenOx8E25Y4o_VYu3Ko6znHg/view?usp=drive_link"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-4 py-2 bg-accent-blue text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-montserrat"
                 >
@@ -360,9 +360,9 @@ function App() {
                 <p className="text-gray-700 text-sm mb-4 font-montserrat font-light">
                   Formularz dla osób chcących zostać członkami stowarzyszenia
                 </p>
-                <a 
-                  href="https://drive.google.com/file/d/1ViMeXcbth60fqZ2hOXK6UopXE5mE3Udz/view?usp=drive_link" 
-                  target="_blank" 
+                <a
+                  href="https://drive.google.com/file/d/1ViMeXcbth60fqZ2hOXK6UopXE5mE3Udz/view?usp=drive_link"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-montserrat"
                 >
@@ -376,7 +376,7 @@ function App() {
               <h4 className="text-lg font-montserrat font-semibold text-black mb-3">Informacje dodatkowe</h4>
               <div className="text-gray-700 space-y-2 text-sm font-montserrat font-light">
                 <p>• Wypełnioną deklarację należy przesłać na adres: <strong>biuro@on-ai.pl</strong></p>
-                <p>• Składkę członkowską (50 zł rocznie) można uiścić przelewem na konto stowarzyszenia</p> 
+                <p>• Składkę członkowską (50 zł rocznie) można uiścić przelewem na konto stowarzyszenia</p>
                 <p className="font-montserrat font-medium">72 1090 2268 0000 0001 6098 9486</p>
                 <p>Tytuł przelewu: Nazwisko Pierwsza litera imienia Rok składkowy</p>
                 <p>• Zarząd rozpatruje wnioski o członkostwo w ciągu 30 dni</p>
@@ -392,9 +392,9 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex justify-center mb-6">
-              <img 
-                src="/logo-tata-instagram.JPG" 
-                alt="AI Association Logo" 
+              <img
+                src="/logo-tata-instagram.JPG"
+                alt="AI Association Logo"
                 className="h-16 w-auto"
               />
             </div>
@@ -466,9 +466,9 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-3 mb-4 md:mb-0">
-              <img 
-                src="/logo-tata-instagram copy.JPG" 
-                alt="ON.AI Logo" 
+              <img
+                src="/logo-tata-instagram copy.JPG"
+                alt="ON.AI Logo"
                 className="h-8 w-auto"
               />
               <span className="text-xl font-anton">Stowarzyszenie ON.AI</span>

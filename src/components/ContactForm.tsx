@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from "react";
+import * as React from 'react';
+
 
 interface ContactFormProps {
   onSubmitSuccess?: () => void;
@@ -25,7 +27,7 @@ export default function ContactForm({ onSubmitSuccess }: ContactFormProps) {
     subject: '',
     message: ''
   });
-  
+
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -86,7 +88,7 @@ export default function ContactForm({ onSubmitSuccess }: ContactFormProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -96,18 +98,18 @@ export default function ContactForm({ onSubmitSuccess }: ContactFormProps) {
     setSubmitMessage('');
 
     try {
-    const response = await fetch('/api/send-contact-message', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(formData),
-});
+      const response = await fetch('/api/send-contact-message', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
 
       const result = await response.json();
 
-if (response.ok) {
+      if (response.ok) {
         setSubmitStatus('success');
         setSubmitMessage(result.message || 'Dziękujemy za kontakt! Odpowiemy najszybciej jak to możliwe.');
         setFormData({ name: '', email: '', subject: '', message: '' });
@@ -143,15 +145,14 @@ if (response.ok) {
         <label htmlFor="name" className="block text-sm font-montserrat font-medium text-black mb-2">
           Imię i nazwisko *
         </label>
-        <input 
-          type="text" 
+        <input
+          type="text"
           id="name"
           name="name"
           value={formData.name}
           onChange={handleInputChange}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-accent-blue focus:border-transparent transition-colors font-montserrat ${
-            errors.name ? 'border-red-500' : 'border-gray-300'
-          }`}
+          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-accent-blue focus:border-transparent transition-colors font-montserrat ${errors.name ? 'border-red-500' : 'border-gray-300'
+            }`}
           placeholder="Twoje imię i nazwisko"
           disabled={isSubmitting}
           maxLength={100}
@@ -163,15 +164,14 @@ if (response.ok) {
         <label htmlFor="email" className="block text-sm font-montserrat font-medium text-black mb-2">
           Email *
         </label>
-        <input 
-          type="email" 
+        <input
+          type="email"
           id="email"
           name="email"
           value={formData.email}
           onChange={handleInputChange}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-accent-blue focus:border-transparent transition-colors font-montserrat ${
-            errors.email ? 'border-red-500' : 'border-gray-300'
-          }`}
+          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-accent-blue focus:border-transparent transition-colors font-montserrat ${errors.email ? 'border-red-500' : 'border-gray-300'
+            }`}
           placeholder="twoj.email@example.com"
           disabled={isSubmitting}
           maxLength={100}
@@ -183,15 +183,14 @@ if (response.ok) {
         <label htmlFor="subject" className="block text-sm font-montserrat font-medium text-black mb-2">
           Temat *
         </label>
-        <input 
-          type="text" 
+        <input
+          type="text"
           id="subject"
           name="subject"
           value={formData.subject}
           onChange={handleInputChange}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-accent-blue focus:border-transparent transition-colors font-montserrat ${
-            errors.subject ? 'border-red-500' : 'border-gray-300'
-          }`}
+          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-accent-blue focus:border-transparent transition-colors font-montserrat ${errors.subject ? 'border-red-500' : 'border-gray-300'
+            }`}
           placeholder="Temat wiadomości"
           disabled={isSubmitting}
           maxLength={150}
@@ -203,15 +202,14 @@ if (response.ok) {
         <label htmlFor="message" className="block text-sm font-montserrat font-medium text-black mb-2">
           Wiadomość *
         </label>
-        <textarea 
+        <textarea
           id="message"
           name="message"
           value={formData.message}
           onChange={handleInputChange}
           rows={4}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-accent-blue focus:border-transparent transition-colors resize-vertical font-montserrat ${
-            errors.message ? 'border-red-500' : 'border-gray-300'
-          }`}
+          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-accent-blue focus:border-transparent transition-colors resize-vertical font-montserrat ${errors.message ? 'border-red-500' : 'border-gray-300'
+            }`}
           placeholder="Twoja wiadomość..."
           disabled={isSubmitting}
           maxLength={1000}
@@ -222,14 +220,13 @@ if (response.ok) {
         </p>
       </div>
 
-      <button 
+      <button
         type="submit"
         disabled={isSubmitting}
-        className={`w-full font-montserrat font-medium py-3 rounded-lg transition-all duration-300 ${
-          isSubmitting
+        className={`w-full font-montserrat font-medium py-3 rounded-lg transition-all duration-300 ${isSubmitting
             ? 'bg-gray-400 cursor-not-allowed'
             : 'bg-black hover:bg-gray-800 transform hover:scale-[1.02]'
-        } text-white`}
+          } text-white`}
       >
         {isSubmitting ? 'Wysyłanie...' : 'Wyślij wiadomość'}
       </button>
