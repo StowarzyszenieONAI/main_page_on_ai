@@ -1,7 +1,7 @@
 {
   "functions": {
-    "api/*.ts": {
-      "runtime": "nodejs18.x"
+    "api/send-contact-message.ts": {
+      "runtime": "vercel/node@18"
     }
   }
 }
