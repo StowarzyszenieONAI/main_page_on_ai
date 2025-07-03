@@ -308,19 +308,20 @@ function App() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-accent-blue text-white rounded-full flex items-center justify-center font-montserrat font-bold text-sm">3</div>
-                  <div>
-                    <h4 className="font-montserrat font-semibold text-black mb-1">Uiszcz składkę</h4>
-                    <p className="text-gray-700 text-sm font-montserrat font-light">Opłać roczną składkę członkowską (50 zł)</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-accent-blue text-white rounded-full flex items-center justify-center font-montserrat font-bold text-sm">4</div>
                   <div>
                     <h4 className="font-montserrat font-semibold text-black mb-1">Otrzymaj potwierdzenie</h4>
                     <p className="text-gray-700 text-sm font-montserrat font-light">Zarząd rozpatrzy wniosek i poinformuje o decyzji</p>
                   </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-8 h-8 bg-accent-blue text-white rounded-full flex items-center justify-center font-montserrat font-bold text-sm">3</div>
+                    <div>
+                      <h4 className="font-montserrat font-semibold text-black mb-1">Uiszcz składkę</h4>
+                      <p className="text-gray-700 text-sm font-montserrat font-light">Opłać roczną składkę członkowską (50 zł)</p>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
