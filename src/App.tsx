@@ -308,180 +308,181 @@ function App() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-accent-blue text-white rounded-full flex items-center justify-center font-montserrat font-bold text-sm">4</div>
+                  <div className="w-8 h-8 bg-accent-blue text-white rounded-full flex items-center justify-center font-montserrat font-bold text-sm">3</div>
                   <div>
                     <h4 className="font-montserrat font-semibold text-black mb-1">Otrzymaj potwierdzenie</h4>
                     <p className="text-gray-700 text-sm font-montserrat font-light">Zarząd rozpatrzy wniosek i poinformuje o decyzji</p>
                   </div>
+                </div>
 
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-accent-blue text-white rounded-full flex items-center justify-center font-montserrat font-bold text-sm">3</div>
-                    <div>
-                      <h4 className="font-montserrat font-semibold text-black mb-1">Uiszcz składkę</h4>
-                      <p className="text-gray-700 text-sm font-montserrat font-light">Opłać roczną składkę członkowską (50 zł)</p>
-                    </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-accent-blue text-white rounded-full flex items-center justify-center font-montserrat font-bold text-sm">4</div>
+                  <div>
+                    <h4 className="font-montserrat font-semibold text-black mb-1">Uiszcz składkę</h4>
+                    <p className="text-gray-700 text-sm font-montserrat font-light">Opłać roczną składkę członkowską (50 zł)</p>
                   </div>
-
                 </div>
-              </div>
-            </div>
-          </div>
 
-          {/* Documents Section */}
-          <div className="bg-white rounded-lg shadow-sm p-8 border border-gray-100">
-            <h3 className="text-2xl font-anton text-black mb-8 text-center">Dokumenty do pobrania</h3>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Statutes */}
-              <div className="text-center p-6 border-2 border-gray-200 rounded-lg hover:border-accent-blue transition-colors">
-                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FileText className="h-8 w-8 text-accent-blue" />
-                </div>
-                <h4 className="text-lg font-montserrat font-semibold text-black mb-2">Statut Stowarzyszenia</h4>
-                <p className="text-gray-700 text-sm mb-4 font-montserrat font-light">
-                  Poznaj cele, zasady działania i strukturę organizacyjną stowarzyszenia
-                </p>
-                <a
-                  href="https://drive.google.com/file/d/1mJ9HDJq5oenOx8E25Y4o_VYu3Ko6znHg/view?usp=drive_link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 bg-accent-blue text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-montserrat"
-                >
-                  <FileText className="h-4 w-4 mr-2" />
-                  Zobacz statut
-                </a>
-              </div>
-
-              {/* Member Declaration */}
-              <div className="text-center p-6 border-2 border-gray-200 rounded-lg hover:border-black transition-colors">
-                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Download className="h-8 w-8 text-black" />
-                </div>
-                <h4 className="text-lg font-montserrat font-semibold text-black mb-2">Deklaracja członkowska</h4>
-                <p className="text-gray-700 text-sm mb-4 font-montserrat font-light">
-                  Formularz dla osób chcących zostać członkami stowarzyszenia
-                </p>
-                <a
-                  href="https://drive.google.com/file/d/1ViMeXcbth60fqZ2hOXK6UopXE5mE3Udz/view?usp=drive_link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-montserrat"
-                >
-                  <Download className="h-4 w-4 mr-2" />
-                  Pobierz PDF
-                </a>
-              </div>
-            </div>
-
-            <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-              <h4 className="text-lg font-montserrat font-semibold text-black mb-3">Informacje dodatkowe</h4>
-              <div className="text-gray-700 space-y-2 text-sm font-montserrat font-light">
-                <p>• Wypełnioną deklarację należy przesłać na adres: <strong>biuro@on-ai.pl</strong></p>
-                <p>• Składkę członkowską (50 zł rocznie) można uiścić przelewem na konto stowarzyszenia</p>
-                <p className="font-montserrat font-medium">72 1090 2268 0000 0001 6098 9486</p>
-                <p>Tytuł przelewu: Nazwisko Pierwsza litera imienia Rok składkowy</p>
-                <p>• Zarząd rozpatruje wnioski o członkostwo w ciągu 30 dni</p>
-                <p>• W przypadku pytań, skontaktuj się z nami przez formularz kontaktowy</p>
               </div>
             </div>
           </div>
         </div>
-      </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="flex justify-center mb-6">
-              <img
-                src="/logo-tata-instagram.JPG"
-                alt="AI Association Logo"
-                className="h-16 w-auto"
-              />
+        {/* Documents Section */}
+        <div className="bg-white rounded-lg shadow-sm p-8 border border-gray-100">
+          <h3 className="text-2xl font-anton text-black mb-8 text-center">Dokumenty do pobrania</h3>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Statutes */}
+            <div className="text-center p-6 border-2 border-gray-200 rounded-lg hover:border-accent-blue transition-colors">
+              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FileText className="h-8 w-8 text-accent-blue" />
+              </div>
+              <h4 className="text-lg font-montserrat font-semibold text-black mb-2">Statut Stowarzyszenia</h4>
+              <p className="text-gray-700 text-sm mb-4 font-montserrat font-light">
+                Poznaj cele, zasady działania i strukturę organizacyjną stowarzyszenia
+              </p>
+              <a
+                href="https://drive.google.com/file/d/1mJ9HDJq5oenOx8E25Y4o_VYu3Ko6znHg/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 bg-accent-blue text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-montserrat"
+              >
+                <FileText className="h-4 w-4 mr-2" />
+                Zobacz statut
+              </a>
             </div>
-            <h2 className="text-3xl md:text-4xl font-anton text-black mb-4">Skontaktuj się z nami</h2>
-            <p className="text-lg text-gray-700 font-montserrat font-light">
-              Masz pytania? Chcesz nawiązać współpracę? Czekamy na wiadomość od Ciebie.
-            </p>
+
+            {/* Member Declaration */}
+            <div className="text-center p-6 border-2 border-gray-200 rounded-lg hover:border-black transition-colors">
+              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Download className="h-8 w-8 text-black" />
+              </div>
+              <h4 className="text-lg font-montserrat font-semibold text-black mb-2">Deklaracja członkowska</h4>
+              <p className="text-gray-700 text-sm mb-4 font-montserrat font-light">
+                Formularz dla osób chcących zostać członkami stowarzyszenia
+              </p>
+              <a
+                href="https://drive.google.com/file/d/1ViMeXcbth60fqZ2hOXK6UopXE5mE3Udz/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-montserrat"
+              >
+                <Download className="h-4 w-4 mr-2" />
+                Pobierz PDF
+              </a>
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-xl font-anton text-black mb-6">Informacje kontaktowe</h3>
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                    <Mail className="h-6 w-6 text-accent-blue" />
-                  </div>
-                  <div>
-                    <h4 className="font-montserrat font-semibold text-black">Email</h4>
-                    <p className="text-gray-700 font-montserrat">biuro@on-ai.pl</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                    <Phone className="h-6 w-6 text-accent-blue" />
-                  </div>
-                  <div>
-                    <h4 className="font-montserrat font-semibold text-black">Nr telefonu</h4>
-                    <p className="text-gray-700 font-montserrat">+48 607 440 740</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                    <MapPin className="h-6 w-6 text-accent-blue" />
-                  </div>
-                  <div>
-                    <h4 className="font-montserrat font-semibold text-black">Adres</h4>
-                    <p className="text-gray-700 font-montserrat">ul. ZA WIATRAKIEM 1C/6<br />72-006 MIERZYN ZACHODNIOPOMORSKIE</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-8">
-                <h4 className="font-montserrat font-semibold text-black mb-4">Obserwuj nas</h4>
-                <div className="flex space-x-4">
-                  <a href="https://www.facebook.com/profile.php?id=61572628461771" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-accent-blue hover:text-white transition-colors">
-                    <Facebook className="h-5 w-5" />
-                  </a>
-                  <a href="https://www.linkedin.com/company/stowarzyszenie-on-ai" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-accent-blue hover:text-white transition-colors">
-                    <Linkedin className="h-5 w-5" />
-                  </a>
-                  <a href="https://www.instagram.com/onai_szczecin?igsh=MXhpaXZqMXBhaDJkcw==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-accent-blue hover:text-white transition-colors">
-                    <Instagram className="h-5 w-5" />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <h3 className="text-xl font-anton text-black mb-6">Wyślij nam wiadomość</h3>
-              <ContactForm />
+          <div className="mt-8 p-6 bg-gray-50 rounded-lg">
+            <h4 className="text-lg font-montserrat font-semibold text-black mb-3">Informacje dodatkowe</h4>
+            <div className="text-gray-700 space-y-2 text-sm font-montserrat font-light">
+              <p>• Wypełnioną deklarację należy przesłać na adres: <strong>biuro@on-ai.pl</strong></p>
+              <p>• Składkę członkowską (50 zł rocznie) można uiścić przelewem na konto stowarzyszenia</p>
+              <p className="font-montserrat font-medium">72 1090 2268 0000 0001 6098 9486</p>
+              <p>Tytuł przelewu: Nazwisko Pierwsza litera imienia Rok składkowy</p>
+              <p>• Zarząd rozpatruje wnioski o członkostwo w ciągu 30 dni</p>
+              <p>• W przypadku pytań, skontaktuj się z nami przez formularz kontaktowy</p>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-black text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-3 mb-4 md:mb-0">
-              <img
-                src="/logo-tata-instagram copy.JPG"
-                alt="ON.AI Logo"
-                className="h-8 w-auto"
-              />
-              <span className="text-xl font-anton">Stowarzyszenie ON.AI</span>
-            </div>
-            <div className="text-gray-400 text-center md:text-right font-montserrat">
-              <p>&copy; 2025 Stowarzyszenie ON.AI. All rights reserved.</p>
-              <p className="text-sm mt-1 font-handwritten">Rozwój sztucznej inteligencji poprzez społeczność i współpracę</p>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
+      </section >
+
+    {/* Contact Section */ }
+    < section id = "contact" className = "py-20 bg-white" >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <div className="flex justify-center mb-6">
+            <img
+              src="/logo-tata-instagram.JPG"
+              alt="AI Association Logo"
+              className="h-16 w-auto"
+            />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-anton text-black mb-4">Skontaktuj się z nami</h2>
+          <p className="text-lg text-gray-700 font-montserrat font-light">
+            Masz pytania? Chcesz nawiązać współpracę? Czekamy na wiadomość od Ciebie.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12">
+          <div>
+            <h3 className="text-xl font-anton text-black mb-6">Informacje kontaktowe</h3>
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <Mail className="h-6 w-6 text-accent-blue" />
+                </div>
+                <div>
+                  <h4 className="font-montserrat font-semibold text-black">Email</h4>
+                  <p className="text-gray-700 font-montserrat">biuro@on-ai.pl</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <Phone className="h-6 w-6 text-accent-blue" />
+                </div>
+                <div>
+                  <h4 className="font-montserrat font-semibold text-black">Nr telefonu</h4>
+                  <p className="text-gray-700 font-montserrat">+48 607 440 740</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <MapPin className="h-6 w-6 text-accent-blue" />
+                </div>
+                <div>
+                  <h4 className="font-montserrat font-semibold text-black">Adres</h4>
+                  <p className="text-gray-700 font-montserrat">ul. ZA WIATRAKIEM 1C/6<br />72-006 MIERZYN ZACHODNIOPOMORSKIE</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <h4 className="font-montserrat font-semibold text-black mb-4">Obserwuj nas</h4>
+              <div className="flex space-x-4">
+                <a href="https://www.facebook.com/profile.php?id=61572628461771" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-accent-blue hover:text-white transition-colors">
+                  <Facebook className="h-5 w-5" />
+                </a>
+                <a href="https://www.linkedin.com/company/stowarzyszenie-on-ai" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-accent-blue hover:text-white transition-colors">
+                  <Linkedin className="h-5 w-5" />
+                </a>
+                <a href="https://www.instagram.com/onai_szczecin?igsh=MXhpaXZqMXBhaDJkcw==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-accent-blue hover:text-white transition-colors">
+                  <Instagram className="h-5 w-5" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gray-50 p-8 rounded-lg">
+            <h3 className="text-xl font-anton text-black mb-6">Wyślij nam wiadomość</h3>
+            <ContactForm />
+          </div>
+        </div>
+      </div>
+      </section >
+
+    {/* Footer */ }
+    < footer className = "bg-black text-white py-12" >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex items-center space-x-3 mb-4 md:mb-0">
+            <img
+              src="/logo-tata-instagram copy.JPG"
+              alt="ON.AI Logo"
+              className="h-8 w-auto"
+            />
+            <span className="text-xl font-anton">Stowarzyszenie ON.AI</span>
+          </div>
+          <div className="text-gray-400 text-center md:text-right font-montserrat">
+            <p>&copy; 2025 Stowarzyszenie ON.AI. All rights reserved.</p>
+            <p className="text-sm mt-1 font-handwritten">Rozwój sztucznej inteligencji poprzez społeczność i współpracę</p>
+          </div>
+        </div>
+      </div>
+      </footer >
+    </div >
   );
 }
 
