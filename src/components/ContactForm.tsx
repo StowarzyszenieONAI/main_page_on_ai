@@ -1,17 +1,5 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import * as React from 'react';
-
-
-interface ContactFormProps {
-  onSubmitSuccess?: () => void;
-}
-
-interface FormData {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
 
 interface FormErrors {
   name?: string;
@@ -20,8 +8,9 @@ interface FormErrors {
   message?: string;
 }
 
-export default function ContactForm({ onSubmitSuccess }: ContactFormProps) {
-  const [formData, setFormData] = useState<FormData>({
+export default function ContactForm() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
@@ -30,35 +19,21 @@ export default function ContactForm({ onSubmitSuccess }: ContactFormProps) {
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [submitMessage, setSubmitMessage] = useState('');
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
 
-    if (!formData.name.trim()) {
-      newErrors.name = 'Imię i nazwisko jest wymagane';
-    } else if (formData.name.trim().length < 2) {
-      newErrors.name = 'Imię i nazwisko musi mieć co najmniej 2 znaki';
-    }
+    if (!formData.name.trim()) newErrors.name = 'Imię i nazwisko jest wymagane';
+    else if (formData.name.trim().length < 2) newErrors.name = 'Minimum 2 znaki';
 
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email jest wymagany';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Nieprawidłowy format email';
-    }
+    if (!formData.email.trim()) newErrors.email = 'Email jest wymagany';
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = 'Nieprawidłowy email';
 
-    if (!formData.subject.trim()) {
-      newErrors.subject = 'Temat jest wymagany';
-    } else if (formData.subject.trim().length < 3) {
-      newErrors.subject = 'Temat musi mieć co najmniej 3 znaki';
-    }
+    if (!formData.subject.trim()) newErrors.subject = 'Temat jest wymagany';
+    else if (formData.subject.trim().length < 3) newErrors.subject = 'Minimum 3 znaki';
 
-    if (!formData.message.trim()) {
-      newErrors.message = 'Wiadomość jest wymagana';
-    } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'Wiadomość musi mieć co najmniej 10 znaków';
-    }
+    if (!formData.message.trim()) newErrors.message = 'Wiadomość jest wymagana';
+    else if (formData.message.trim().length < 10) newErrors.message = 'Minimum 10 znaków';
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -66,179 +41,94 @@ export default function ContactForm({ onSubmitSuccess }: ContactFormProps) {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-
-    // Clear error for this field when user starts typing
-    if (errors[name as keyof FormErrors]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: undefined
-      }));
-    }
-
-    // Clear submit status when user starts typing
-    if (submitStatus !== 'idle') {
-      setSubmitStatus('idle');
-      setSubmitMessage('');
-    }
+    setFormData(prev => ({ ...prev, [name]: value }));
+    setErrors(prev => ({ ...prev, [name]: undefined }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!validateForm()) {
-      return;
-    }
-
+    if (!validateForm()) return;
     setIsSubmitting(true);
-    setSubmitStatus('idle');
-    setSubmitMessage('');
-
-    try {
-      const response = await fetch('/api/send-contact-message', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-
-      const result = await response.json();
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        setSubmitMessage(result.message || 'Dziękujemy za kontakt! Odpowiemy najszybciej jak to możliwe.');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        onSubmitSuccess?.();
-      } else {
-        setSubmitStatus('error');
-        setSubmitMessage(result.error || 'Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.');
-      }
-    } catch (error) {
-      console.error('Contact form submission error:', error);
-      setSubmitStatus('error');
-      setSubmitMessage('Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.');
-    } finally {
-      setIsSubmitting(false);
-    }
+    formRef.current?.submit(); // submit native form
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      {submitStatus === 'success' && (
-        <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
-          <p className="text-green-800 font-montserrat">{submitMessage}</p>
-        </div>
-      )}
-
-      {submitStatus === 'error' && (
-        <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-          <p className="text-red-800 font-montserrat">{submitMessage}</p>
-        </div>
-      )}
+    <form
+      ref={formRef}
+      onSubmit={handleSubmit}
+      action="https://formspree.io/f/xqabjola"
+      method="POST"
+      className="space-y-6 bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100"
+    >
+      <input type="hidden" name="_subject" value="Nowa wiadomość z formularza ON.AI" />
 
       <div>
-        <label htmlFor="name" className="block text-sm font-montserrat font-medium text-black mb-2">
-          Imię i nazwisko *
-        </label>
+        <label htmlFor="name" className="block text-sm font-medium text-black mb-2">Imię i nazwisko *</label>
         <input
           type="text"
           id="name"
           name="name"
           value={formData.name}
           onChange={handleInputChange}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-accent-blue focus:border-transparent transition-colors font-montserrat ${errors.name ? 'border-red-500' : 'border-gray-300'
-            }`}
-          placeholder="Twoje imię i nazwisko"
-          disabled={isSubmitting}
+          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 ${errors.name ? 'border-red-500' : 'border-gray-300'}`}
           maxLength={100}
         />
-        {errors.name && <p className="mt-1 text-sm text-red-600 font-montserrat">{errors.name}</p>}
+        {errors.name && <p className="text-sm text-red-600 mt-1">{errors.name}</p>}
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-montserrat font-medium text-black mb-2">
-          Email *
-        </label>
+        <label htmlFor="email" className="block text-sm font-medium text-black mb-2">Email *</label>
         <input
           type="email"
           id="email"
           name="email"
           value={formData.email}
           onChange={handleInputChange}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-accent-blue focus:border-transparent transition-colors font-montserrat ${errors.email ? 'border-red-500' : 'border-gray-300'
-            }`}
-          placeholder="twoj.email@example.com"
-          disabled={isSubmitting}
+          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 ${errors.email ? 'border-red-500' : 'border-gray-300'}`}
           maxLength={100}
         />
-        {errors.email && <p className="mt-1 text-sm text-red-600 font-montserrat">{errors.email}</p>}
+        {errors.email && <p className="text-sm text-red-600 mt-1">{errors.email}</p>}
       </div>
 
       <div>
-        <label htmlFor="subject" className="block text-sm font-montserrat font-medium text-black mb-2">
-          Temat *
-        </label>
+        <label htmlFor="subject" className="block text-sm font-medium text-black mb-2">Temat *</label>
         <input
           type="text"
           id="subject"
           name="subject"
           value={formData.subject}
           onChange={handleInputChange}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-accent-blue focus:border-transparent transition-colors font-montserrat ${errors.subject ? 'border-red-500' : 'border-gray-300'
-            }`}
-          placeholder="Temat wiadomości"
-          disabled={isSubmitting}
+          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 ${errors.subject ? 'border-red-500' : 'border-gray-300'}`}
           maxLength={150}
         />
-        {errors.subject && <p className="mt-1 text-sm text-red-600 font-montserrat">{errors.subject}</p>}
+        {errors.subject && <p className="text-sm text-red-600 mt-1">{errors.subject}</p>}
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-montserrat font-medium text-black mb-2">
-          Wiadomość *
-        </label>
+        <label htmlFor="message" className="block text-sm font-medium text-black mb-2">Wiadomość *</label>
         <textarea
           id="message"
           name="message"
           value={formData.message}
           onChange={handleInputChange}
-          rows={4}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-accent-blue focus:border-transparent transition-colors resize-vertical font-montserrat ${errors.message ? 'border-red-500' : 'border-gray-300'
-            }`}
-          placeholder="Twoja wiadomość..."
-          disabled={isSubmitting}
+          rows={5}
+          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 ${errors.message ? 'border-red-500' : 'border-gray-300'}`}
           maxLength={1000}
         />
-        {errors.message && <p className="mt-1 text-sm text-red-600 font-montserrat">{errors.message}</p>}
-        <p className="mt-1 text-xs text-gray-500 font-montserrat">
-          {formData.message.length}/1000 znaków
-        </p>
+        {errors.message && <p className="text-sm text-red-600 mt-1">{errors.message}</p>}
+        <p className="text-xs text-gray-500 mt-1">{formData.message.length}/1000 znaków</p>
       </div>
 
       <button
         type="submit"
         disabled={isSubmitting}
-        className={`w-full font-montserrat font-medium py-3 rounded-lg transition-all duration-300 ${isSubmitting
-            ? 'bg-gray-400 cursor-not-allowed'
-            : 'bg-black hover:bg-gray-800 transform hover:scale-[1.02]'
-          } text-white`}
+        className="w-full py-3 px-6 bg-black text-white rounded-lg hover:bg-gray-800 transition-all"
       >
         {isSubmitting ? 'Wysyłanie...' : 'Wyślij wiadomość'}
       </button>
 
-      <p className="text-xs text-gray-500 text-center font-montserrat">
-        * Pola wymagane
-      </p>
-
-      <div className="text-xs text-gray-400 text-center font-montserrat bg-gray-50 p-3 rounded-lg">
-        <p>🔒 Bezpieczny formularz</p>
-        <p>Twoje dane są chronione i będą używane wyłącznie do kontaktu z Tobą.</p>
-      </div>
+      <p className="text-xs text-gray-500 text-center font-montserrat mt-4">* Pola wymagane</p>
     </form>
   );
 }
