@@ -322,66 +322,68 @@ function App() {
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Documents Section */}
-            <div className="bg-white rounded-lg shadow-sm p-8 border border-gray-100">
-              <h3 className="text-2xl font-anton text-black mb-8 text-center">Dokumenty do pobrania</h3>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                {/* Statutes */}
-                <div className="text-center p-6 border-2 border-gray-200 rounded-lg hover:border-accent-blue transition-colors">
-                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <FileText className="h-8 w-8 text-accent-blue" />
-                  </div>
-                  <h4 className="text-lg font-montserrat font-semibold text-black mb-2">Statut Stowarzyszenia</h4>
-                  <p className="text-gray-700 text-sm mb-4 font-montserrat font-light">
-                    Poznaj cele, zasady działania i strukturę organizacyjną stowarzyszenia
-                  </p>
-                  <a
-                    href="https://drive.google.com/file/d/1mJ9HDJq5oenOx8E25Y4o_VYu3Ko6znHg/view?usp=drive_link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center px-4 py-2 bg-accent-blue text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-montserrat"
-                  >
-                    <FileText className="h-4 w-4 mr-2" />
-                    Zobacz statut
-                  </a>
+          {/* Documents Section */}
+          <div className="bg-white rounded-lg shadow-sm p-8 border border-gray-100">
+            <h3 className="text-2xl font-anton text-black mb-8 text-center">Dokumenty do pobrania</h3>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Statutes */}
+              <div className="text-center p-6 border-2 border-gray-200 rounded-lg hover:border-accent-blue transition-colors">
+                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FileText className="h-8 w-8 text-accent-blue" />
                 </div>
-
-                {/* Member Declaration */}
-                <div className="text-center p-6 border-2 border-gray-200 rounded-lg hover:border-black transition-colors">
-                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Download className="h-8 w-8 text-black" />
-                  </div>
-                  <h4 className="text-lg font-montserrat font-semibold text-black mb-2">Deklaracja członkowska</h4>
-                  <p className="text-gray-700 text-sm mb-4 font-montserrat font-light">
-                    Formularz dla osób chcących zostać członkami stowarzyszenia
-                  </p>
-                  <a
-                    href="https://drive.google.com/file/d/1ViMeXcbth60fqZ2hOXK6UopXE5mE3Udz/view?usp=drive_link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-montserrat"
-                  >
-                    <Download className="h-4 w-4 mr-2" />
-                    Pobierz PDF
-                  </a>
-                </div>
+                <h4 className="text-lg font-montserrat font-semibold text-black mb-2">Statut Stowarzyszenia</h4>
+                <p className="text-gray-700 text-sm mb-4 font-montserrat font-light">
+                  Poznaj cele, zasady działania i strukturę organizacyjną stowarzyszenia
+                </p>
+                <a
+                  href="https://drive.google.com/file/d/1mJ9HDJq5oenOx8E25Y4o_VYu3Ko6znHg/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 bg-accent-blue text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-montserrat"
+                >
+                  <FileText className="h-4 w-4 mr-2" />
+                  Zobacz statut
+                </a>
               </div>
 
-              <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-                <h4 className="text-lg font-montserrat font-semibold text-black mb-3">Informacje dodatkowe</h4>
-                <div className="text-gray-700 space-y-2 text-sm font-montserrat font-light">
-                  <p>• Wypełnioną deklarację należy przesłać na adres: <strong>biuro@on-ai.pl</strong></p>
-                  <p>• Składkę członkowską (50 zł rocznie) można uiścić przelewem na konto stowarzyszenia</p>
-                  <p className="font-montserrat font-medium">72 1090 2268 0000 0001 6098 9486</p>
-                  <p>Tytuł przelewu: Nazwisko Pierwsza litera imienia Rok składkowy</p>
-                  <p>• Zarząd rozpatruje wnioski o członkostwo w ciągu 30 dni</p>
-                  <p>• W przypadku pytań, skontaktuj się z nami przez formularz kontaktowy</p>
+              {/* Member Declaration */}
+              <div className="text-center p-6 border-2 border-gray-200 rounded-lg hover:border-black transition-colors">
+                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Download className="h-8 w-8 text-black" />
                 </div>
+                <h4 className="text-lg font-montserrat font-semibold text-black mb-2">Deklaracja członkowska</h4>
+                <p className="text-gray-700 text-sm mb-4 font-montserrat font-light">
+                  Formularz dla osób chcących zostać członkami stowarzyszenia
+                </p>
+                <a
+                  href="https://drive.google.com/file/d/1ViMeXcbth60fqZ2hOXK6UopXE5mE3Udz/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-montserrat"
+                >
+                  <Download className="h-4 w-4 mr-2" />
+                  Pobierz PDF
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-8 p-6 bg-gray-50 rounded-lg">
+              <h4 className="text-lg font-montserrat font-semibold text-black mb-3">Informacje dodatkowe</h4>
+              <div className="text-gray-700 space-y-2 text-sm font-montserrat font-light">
+                <p>• Wypełnioną deklarację należy przesłać na adres: <strong>biuro@on-ai.pl</strong></p>
+                <p>• Składkę członkowską (50 zł rocznie) można uiścić przelewem na konto stowarzyszenia</p>
+                <p className="font-montserrat font-medium">72 1090 2268 0000 0001 6098 9486</p>
+                <p>Tytuł przelewu: Nazwisko Pierwsza litera imienia Rok składkowy</p>
+                <p>• Zarząd rozpatruje wnioski o członkostwo w ciągu 30 dni</p>
+                <p>• W przypadku pytań, skontaktuj się z nami przez formularz kontaktowy</p>
               </div>
             </div>
           </div>
+        </div>
       </section>
 
       {/* Contact Section */}
