@@ -340,7 +340,7 @@ function App() {
                   Poznaj cele, zasady działania i strukturę organizacyjną stowarzyszenia
                 </p>
                 <a
-                  href="https://drive.google.com/file/d/1mJ9HDJq5oenOx8E25Y4o_VYu3Ko6znHg/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1mJ9HDJq5oenOx8E25Y4o_VYu3Ko6znHg/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-4 py-2 bg-accent-blue text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-montserrat"
@@ -360,7 +360,7 @@ function App() {
                   Formularz dla osób chcących zostać członkami stowarzyszenia
                 </p>
                 <a
-                  href="https://drive.google.com/file/d/1ViMeXcbth60fqZ2hOXK6UopXE5mE3Udz/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1R2KPy2BH4cc9OkxGWL3gVyac5R166SKe/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-montserrat"
