@@ -1,6 +1,7 @@
 import React from 'react';
 import { Users, Award, Mail, Phone, MapPin, Calendar, Play, ArrowRight, Github, Linkedin, Twitter, Download, FileText, UserPlus, Facebook, Instagram } from 'lucide-react';
 import ContactForm from './components/ContactForm';
+import EventsSection from './components/EventsSection';
 
 function App() {
   const scrollToSection = (sectionId: string) => {
@@ -25,8 +26,12 @@ function App() {
               </span>
             </div>
             <div className="hidden md:flex space-x-8">
+              <button onClick={() => scrollToSection('events')} className="text-black hover:text-accent-blue transition-colors font-montserrat font-medium">Wydarzenia</button>
+
               <button onClick={() => scrollToSection('about')} className="text-black hover:text-accent-blue transition-colors font-montserrat font-medium">O nas</button>
+
               <button onClick={() => scrollToSection('achievements')} className="text-black hover:text-accent-blue transition-colors font-montserrat font-medium">Projekty</button>
+
               <button onClick={() => scrollToSection('join')} className="text-black hover:text-accent-blue transition-colors font-montserrat font-medium">Dołącz do nas</button>
               <button onClick={() => scrollToSection('contact')} className="text-black hover:text-accent-blue transition-colors font-montserrat font-medium">Kontakt</button>
             </div>
@@ -75,6 +80,7 @@ function App() {
           </div>
         </div>
       </section>
+      <EventsSection />
 
       {/* About Section */}
       <section id="about" className="py-20 bg-gray-50">
