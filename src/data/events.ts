@@ -25,7 +25,7 @@ export const events: Event[] = [
     type: 'upcoming',
     description: 'Tylko kawa, ciekawość i pytania, których nikt nie zadaje na „poważnych" eventach.',
     location: 'Szczecin',
-    // link: 'https://forms.google.com/zapisy'
+    link: 'https://forms.gle/FUCcESLRVpQLhESF7'
   },
   {
     id: '2',
