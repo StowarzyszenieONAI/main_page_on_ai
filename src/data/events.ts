@@ -19,13 +19,13 @@ export const events: Event[] = [
   {
     id: '1',
     title: 'AI przy kawie',
-    date: 'grudzień 2025',
-    time: '17:00',
+    date: '11.12.2025',
+    time: '17:30',
     category: 'spotkania',
     type: 'upcoming',
     description: 'Tylko kawa, ciekawość i pytania, których nikt nie zadaje na „poważnych" eventach.',
-    location: 'Szczecin',
-    link: 'https://forms.gle/FUCcESLRVpQLhESF7'
+    location: 'Miejsce, Aleja Wojska Polskiego 61,Szczecin',
+    link: 'https://forms.gle/DGFBNJNvTMpPUXpS8'
   },
   {
     id: '2',

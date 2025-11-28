@@ -346,7 +346,7 @@ function App() {
                   Poznaj cele, zasady działania i strukturę organizacyjną stowarzyszenia
                 </p>
                 <a
-                  href="https://drive.google.com/file/d/1mJ9HDJq5oenOx8E25Y4o_VYu3Ko6znHg/view?usp=sharing"
+                  href="https://drive.google.com/file/d/17zlgbULBm2KPWyXiS5fT9wIbA4xHoSLI/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-4 py-2 bg-accent-blue text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-montserrat"
@@ -366,7 +366,7 @@ function App() {
                   Formularz dla osób chcących zostać członkami stowarzyszenia
                 </p>
                 <a
-                  href="https://drive.google.com/file/d/1ViMeXcbth60fqZ2hOXK6UopXE5mE3Udz/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1hHgOlAnZYpGrLlxDGvz81QdCt0opVfkG/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-montserrat"
@@ -437,7 +437,7 @@ function App() {
                   </div>
                   <div>
                     <h4 className="font-montserrat font-semibold text-black">Adres</h4>
-                    <p className="text-gray-700 font-montserrat">ul. ZA WIATRAKIEM 1C/6<br />72-006 MIERZYN ZACHODNIOPOMORSKIE</p>
+                    <p className="text-gray-700 font-montserrat">ul. Łucznicza 7d/7,<br />71-472 Szczecin</p>
                   </div>
                 </div>
               </div>
