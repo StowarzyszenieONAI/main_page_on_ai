@@ -16,28 +16,7 @@ export interface Event {
 
 export const events: Event[] = [
   // ===== PRZYSZŁE WYDARZENIA =====
-  {
-    id: '1',
-    title: 'AI przy kawie',
-    date: '27.01.2026',
-    time: '18:30',
-    category: 'spotkania',
-    type: 'upcoming',
-    description: 'Pogadajmy o Deepfake',
-    location: 'Miejsce, Aleja Wojska Polskiego 61,Szczecin',
-    link: 'https://forms.gle/1jsxZ5UWeitn9Sin6'
-  },
-  {
-    id: '2',
-    title: 'Kulturalnie o AI',
-    date: 'styczeń 2026',
-    time: '16:00',
-    category: 'eventy',
-    type: 'upcoming',
-    description: 'Wydarzenie z cyklu "Kulturalnie o AI". Rozmawiamy o wpływie AI na kulturę, media, muzykę, literaturę i twórczość.',
-    location: 'Szczecin',
-    // link: 'https://forms.google.com/ai-prawo'
-  },
+  
   {
     id: '3',
     title: 'Meetup ON.AI - Networking',
@@ -50,6 +29,28 @@ export const events: Event[] = [
   },
 
   // ===== PRZESZŁE WYDARZENIA =====
+  {
+    id: '1',
+    title: 'AI przy kawie',
+    date: '27.01.2026',
+    time: '18:30',
+    category: 'spotkania',
+    type: 'past',
+    description: 'Pogadajmy o Deepfake',
+    location: 'Miejsce, Aleja Wojska Polskiego 61,Szczecin',
+    link: 'https://forms.gle/1jsxZ5UWeitn9Sin6'
+  },
+  {
+    id: '2',
+    title: 'Kulturalnie o AI',
+    date: 'styczeń 2026',
+    time: '16:00',
+    category: 'eventy',
+    type: 'past',
+    description: 'Wydarzenie z cyklu "Kulturalnie o AI". Rozmawiamy o wpływie AI na kulturę, media, muzykę, literaturę i twórczość.',
+    location: 'Szczecin',
+    // link: 'https://forms.google.com/ai-prawo'
+  },
   {
     id: '7',
     title: 'AI przy kawie',
