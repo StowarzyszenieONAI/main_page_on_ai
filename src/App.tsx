@@ -381,7 +381,7 @@ function App() {
               <h4 className="text-lg font-montserrat font-semibold text-black mb-3">Informacje dodatkowe</h4>
               <div className="text-gray-700 space-y-2 text-sm font-montserrat font-light">
                 <p>• Wypełnioną deklarację należy przesłać na adres: <strong>biuro@on-ai.pl</strong></p>
-                <p>• Składkę członkowską (50 zł rocznie) można uiścić przelewem na konto stowarzyszenia</p>
+                <p>• Składkę członkowską (200 zł rocznie) można uiścić przelewem na konto stowarzyszenia. Dopuszczamy dwie raty.</p>
                 <p className="font-montserrat font-medium">72 1090 2268 0000 0001 6098 9486</p>
                 <p>Tytuł przelewu: Nazwisko Pierwsza litera imienia Rok składkowy</p>
                 <p>• Zarząd rozpatruje wnioski o członkostwo w ciągu 30 dni</p>
