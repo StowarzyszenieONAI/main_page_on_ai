@@ -282,7 +282,7 @@ function App() {
                     prawo głosu w sprawach stowarzyszenia.
                   </p>
                   <div className="text-sm text-gray-600 space-y-1 font-montserrat">
-                    <p>• Składka członkowska: 50 zł rocznie</p>
+                    <p>• Składka członkowska: 200 zł rocznie</p>
                     <p>• Priorytetowy dostęp do warsztatów</p>
                     <p>• Udział w projektach stowarzyszenia</p>
                     <p>• Networking z ekspertami AI</p>
