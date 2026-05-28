@@ -2,6 +2,7 @@ import React from 'react';
 import { Users, Award, Mail, Phone, MapPin, Calendar, Play, ArrowRight, Github, Linkedin, Twitter, Download, FileText, UserPlus, Facebook, Instagram } from 'lucide-react';
 import ContactForm from './components/ContactForm';
 import EventsSection from './components/EventsSection';
+import PartnersSection from './components/PartnersSection';
 
 function App() {
   const scrollToSection = (sectionId: string) => {
@@ -81,7 +82,7 @@ function App() {
         </div>
       </section>
       <EventsSection />
-
+<PartnersSection />
       {/* About Section */}
       <section id="about" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -323,7 +324,7 @@ function App() {
                   <div className="w-8 h-8 bg-accent-blue text-white rounded-full flex items-center justify-center font-montserrat font-bold text-sm">4</div>
                   <div>
                     <h4 className="font-montserrat font-semibold text-black mb-1">Uiszcz składkę</h4>
-                    <p className="text-gray-700 text-sm font-montserrat font-light">Opłać roczną składkę członkowską (50 zł)</p>
+                    <p className="text-gray-700 text-sm font-montserrat font-light">Opłać roczną składkę członkowską </p>
                   </div>
                 </div>
               </div>
