@@ -285,6 +285,9 @@
   }
   :focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:4px}
 
+  /* PAGE CONTAINER — keeps the whole site boxed on very wide monitors */
+  .page{max-width:1440px;margin:0 auto;box-shadow:0 0 60px rgba(14,46,51,.10);position:relative}
+
   /* MOBILE */
   @media(max-width:480px){
     body{font-size:16.5px}
@@ -304,6 +307,7 @@
 </style>
 </head>
 <body>
+<div class="page">
 
 <nav>
   <div class="wrap nav-in">
@@ -663,6 +667,8 @@
     </div>
   </div>
 </footer>
+
+</div>
 
 <script>
   const io = new IntersectionObserver((entries)=>{
