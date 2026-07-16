@@ -72,6 +72,8 @@
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:66px}
   .brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:15px;letter-spacing:.02em}
   .brand .dot{width:11px;height:11px;background:var(--amber);border-radius:3px;transform:rotate(45deg)}
+  .brand-logo{height:32px;width:auto;display:block}
+  @media(max-width:560px){.brand-text{display:none}}
   .nav-links{display:flex;gap:26px;align-items:center;font-size:15px;font-weight:500}
   .nav-links a{text-decoration:none;color:var(--muted)}
   .nav-links a:hover{color:var(--ink)}
@@ -282,13 +284,34 @@
     .btn,.bcard,.card-artifact{transition:none}
   }
   :focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:4px}
+
+  /* MOBILE */
+  @media(max-width:480px){
+    body{font-size:16.5px}
+    .wrap{padding:0 18px}
+    section{padding:56px 0}
+    .hero{padding:36px 0 24px}
+    .nav-in{height:58px}
+    .brand{gap:8px}
+    .brand-logo{height:26px}
+    .nav-cta{padding:8px 14px;font-size:13.5px}
+    .hero-cta,.final .hero-cta{flex-direction:column;align-items:stretch}
+    .hero-cta .btn{width:100%}
+    .patron .box{padding:28px 20px}
+    .tl{padding:22px 20px 20px}
+    .statband .stat{padding:18px 16px}
+  }
 </style>
 </head>
 <body>
 
 <nav>
   <div class="wrap nav-in">
-    <div class="brand"><span class="dot"></span> AI w edukacji · ANS&nbsp;TWP</div>
+    <div class="brand">
+      <img src="Logo ANS TWP.jpg" alt="Logo ANS TWP" class="brand-logo">
+      <img src="logo-ON.AI.czarne.PNG" alt="Logo Stowarzyszenia ON.AI" class="brand-logo">
+      <span class="brand-text">AI w edukacji · ANS&nbsp;TWP</span>
+    </div>
     <div class="nav-links">
       <a href="#dlaczego">Dlaczego</a>
       <a href="#reforma">Reforma26</a>
